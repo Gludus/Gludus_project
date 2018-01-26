@@ -14,10 +14,10 @@ var app = {
     var test = app.randColor(app.colorArray.length);
     $('.frame-color').css('border', app.colorArray[test] + ' 3em solid');
     $('.titre').css('border-bottom', app.colorArray[test] + ' 10px solid');
-    $('a').mouseover(function(){
-      $(this).css('color', app.colorArray[test])
+    $('li').mouseover(function(){
+      $(this).find('a').css('color', app.colorArray[test])
     }).mouseout(function() {
-      $(this).css('color', '#fff')
+      $(this).find('a').css('color', '#f1f2f2')
     });
 
   }

@@ -15,18 +15,30 @@ html a:hover {
     width: 50%;
 }
 
+.work, .identite {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
 .identite {
+  margin-bottom: 2em;
+}
+
+.identite p{
     display: inline;
-    font-size: 50px;
+    font-size: 3em;
     text-align: right;
     z-index: 0;
 }
 
+.work p {
+    margin-bottom: 6px;
+}
 
 #separateur {
     border: 1px solid #000;
     margin: 15px;
-    /*position:;*/
     left: 100px
 }
 
@@ -55,7 +67,7 @@ html a:hover {
     position: relative;
     top: 40vh;
     line-height: 25px;
-    color: #fff
+
 }
 body {
     display: inline-block;
@@ -63,10 +75,13 @@ body {
 
 #inverted {
     background: #000;
-    color: #fff;
+    color: #f1f2f2;
     position: relative;
-    right: 5px;
     padding: 2px 7px;
+}
+
+.titre {
+  font-size: 2em;
 }
 
 .liens {
@@ -74,16 +89,18 @@ body {
     text-align: left;
     position: relative;
     padding: 0;
+    margin-top: 29px;
 }
 
 .liens li {
-    margin: 5px 0;
-    padding: 0 5px;
+    padding: 5px;
     left: 0;
     position: relative;
-    transition: left .3s ease;
+    transition: padding .2s ease;
 }
 
 .liens li:hover {
-    left: 10px;
+    padding-left: 10px;
+    transition: 0.2s ease ;
+    transition-timing-function: linear;
 }
