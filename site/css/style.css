@@ -1,0 +1,8 @@
+@font-face {
+    font-familly: 'DEADJIM';
+    src: url('../font/DEADJIM.ttf');
+}
+
+h1{
+    font-family: 'DEADJIM', 'Arial', 'sans-serif';
+}
