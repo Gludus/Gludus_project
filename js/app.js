@@ -2,9 +2,10 @@ var app = {
   init: function() {
     console.log('App init');
     app.getColor();
+    $('.random').on('click', app.getColor());
   },
 
-  colorArray: ['#EAA835', '#ED1C24', '#11CC5A', '#0BDA4B'],
+  colorArray: ['#eaa835', '#b71919', '#0bda78', '#2695c7'],
 
   randColor:function(max) {
     return Math.floor(Math.random()*Math.floor(max));
@@ -20,7 +21,8 @@ var app = {
       $(this).find('a').css('color', '#f1f2f2')
     });
 
-  }
+  },
+
 }
 
 $(app.init);

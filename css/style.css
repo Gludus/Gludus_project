@@ -1,10 +1,11 @@
-html {
+.frame {
     text-align: center;
     font-family: 'Open Sans', sans-serif;
     background: #2c3840;
     color: #f1f2f2;
+    height: 100%;
 }
-html a {
+body a {
     text-decoration: none;
     color: #f1f2f2
     }
@@ -69,9 +70,6 @@ html a:hover {
     line-height: 25px;
 
 }
-body {
-    display: inline-block;
-}
 
 #inverted {
     background: #000;
@@ -82,6 +80,7 @@ body {
 
 .titre {
   font-size: 2em;
+  padding-top: 2px
 }
 
 .liens {
@@ -89,7 +88,7 @@ body {
     text-align: left;
     position: relative;
     padding: 0;
-    margin-top: 29px;
+    margin-top: 27px;
 }
 
 .liens li {
