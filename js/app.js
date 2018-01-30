@@ -1,11 +1,14 @@
 var app = {
   init: function() {
     console.log('App init');
+    app.teep();
     app.getColor();
-    $('.random').on('click', app.getColor());
   },
-
-  colorArray: ['#eaa835', '#b71919', '#0bda78', '#2695c7'],
+  teep: function() {
+    $('#colorRandom').on('click', app.getColor());
+    console.log('bite');
+  },
+  colorArray: ['#eaa835', '#e83939', '#0bda78', '#2695c7'],
 
   randColor:function(max) {
     return Math.floor(Math.random()*Math.floor(max));

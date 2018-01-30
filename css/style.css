@@ -4,12 +4,13 @@
     background: #2c3840;
     color: #f1f2f2;
     height: 100%;
+    position: relative;
 }
-body a {
+a {
     text-decoration: none;
     color: #f1f2f2
     }
-html a:hover {
+a:hover {
     color:#ED1C24;
 }
 .left-part {
@@ -102,4 +103,14 @@ html a:hover {
     padding-left: 10px;
     transition: 0.2s ease ;
     transition-timing-function: linear;
+}
+
+#colorRandom {
+  height: 1em;
+  width: 1em;
+  background: #fff;
+  bottom: 0;
+  position: absolute;
+  margin: 0 auto;
+  z-index: 10;
 }
