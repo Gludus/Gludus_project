@@ -1,25 +1,33 @@
 var app = {
   init: function() {
     console.log('App init');
-    app.teep();
+    app.changeColor();
     app.getColor();
   },
-  teep: function() {
-    $('#colorRandom').on('click', app.getColor());
-    console.log('bite');
+  changeColor: function() {
+    $('#colorRandom').on('click', app.getColor);
   },
-  colorArray: ['#eaa835', '#e83939', '#0bda78', '#2695c7'],
+  colorArray: ['rgb(234, 168, 53)', 'rgb(232, 57, 57)', 'rgb(11, 218, 120)', 'rgb(38, 149, 199)'],
 
   randColor:function(max) {
-    return Math.floor(Math.random()*Math.floor(max));
+    var currentColor = $('#colorRandom').css('color');
+    var myColor = Math.floor(Math.random()*Math.floor(max));
+    console.log(currentColor);
+    console.log(app.colorArray[myColor]);
+    if (app.colorArray[myColor] == currentColor) {
+      app.randColor(app.colorArray.length);
+      return myColor;
+    }
+    return myColor;
   },
 
   getColor: function() {
-    var test = app.randColor(app.colorArray.length);
-    $('.frame-color').css('border', app.colorArray[test] + ' 3em solid');
-    $('.titre').css('border-bottom', app.colorArray[test] + ' 10px solid');
+    var thisColor = app.randColor(app.colorArray.length);
+    $('#colorRandom').css('color', app.colorArray[thisColor]);
+    $('.frame-color').css('border', app.colorArray[thisColor] + ' 3em solid');
+    $('.titre').css('border-bottom', app.colorArray[thisColor] + ' 10px solid');
     $('li').mouseover(function(){
-      $(this).find('a').css('color', app.colorArray[test])
+      $(this).find('a').css('color', app.colorArray[thisColor])
     }).mouseout(function() {
       $(this).find('a').css('color', '#f1f2f2')
     });
